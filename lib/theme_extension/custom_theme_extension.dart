@@ -16,7 +16,6 @@ export 'package:flutter/material.dart' show Icons, Theme, ThemeExtension, BuildC
 /// A [ThemeExtension] class that will allow the use of custom parameters within a theme.
 /// A different instance should be created for each client.
 class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
-
   /// Creates an instance of [CustomThemeExtension].
   const CustomThemeExtension({
     required this.name,
@@ -28,6 +27,7 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
     required this.email,
     required this.colorPalette,
     required this.textStyles,
+    this.logoImage,
   });
 
   /// The name of the client company.
@@ -57,8 +57,10 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
   /// The [TextStyle]s used across the app.
   final ThemeExtensionTextStyles textStyles;
 
-  /// As other "of" functions, it allows access to this [CustomThemeExtension]
-  /// from higher in the tree.
+  /// Optional logo image URI.
+  final String? logoImage;
+
+  /// Allows access to this [CustomThemeExtension].
   static CustomThemeExtension of(BuildContext context) {
     return Theme.of(context).extension<CustomThemeExtension>()!;
   }
@@ -71,12 +73,13 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
       name: name,
       colorPalette: colorPalette.lerp(otherTheme.colorPalette, t),
       textStyles: textStyles.lerp(otherTheme.textStyles, t),
-        slogan: slogan,
-        streetAddress: streetAddress,
-        city: city,
-        state: state,
-        phone: phone,
-        email: email,
+      slogan: slogan,
+      streetAddress: streetAddress,
+      city: city,
+      state: state,
+      phone: phone,
+      email: email,
+      logoImage: logoImage,
     );
   }
 
@@ -93,17 +96,19 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
     String? clientCountryCode,
     String? clientPhone,
     String? clientEmail,
+    String? clientLogoImage,
   }) {
     return CustomThemeExtension(
       name: clientName ?? name,
       colorPalette: colorPalette ?? this.colorPalette,
       textStyles: textStyles ?? this.textStyles,
-        slogan: clientSlogan ?? slogan,
-        streetAddress: clientStreetAddress ?? streetAddress,
-        city: clientCity ?? city,
-        state: clientCountryCode ?? state,
-        phone: clientPhone ?? phone,
-        email: clientEmail ?? email,
+      slogan: clientSlogan ?? slogan,
+      streetAddress: clientStreetAddress ?? streetAddress,
+      city: clientCity ?? city,
+      state: clientCountryCode ?? state,
+      phone: clientPhone ?? phone,
+      email: clientEmail ?? email,
+      logoImage: clientLogoImage ?? logoImage,
     );
   }
 

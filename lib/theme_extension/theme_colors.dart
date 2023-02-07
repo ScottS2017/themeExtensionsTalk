@@ -1,4 +1,4 @@
-import 'package:theme_extensions/theme_extension/theme.dart';
+import 'package:theme_extensions/theme_extension/custom_theme_extension.dart';
 
 /// Used as a placeholder and is replaced with actual color from theme at runtime.
 enum PrimaryThemeColor {

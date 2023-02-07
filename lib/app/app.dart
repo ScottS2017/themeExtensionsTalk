@@ -27,44 +27,51 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox.expand(
-      child: Row(
-        textDirection: TextDirection.ltr,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Expanded(
-            child: MaterialApp(
-              title: 'Acme Anvil Company',
-              theme: ThemeData(
-                extensions: [
-                  acmeAnvilCompanyThemeExtension,
-                ],
+      child: ColoredBox(
+        color: Colors.grey[200]!,
+        child: Row(
+          textDirection: TextDirection.ltr,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(
+              child: MaterialApp(
+                debugShowCheckedModeBanner: false,
+                title: 'Flutter Web Crafters',
+                theme: ThemeData(
+                  extensions: [
+                    flutterWebCraftersThemeExtension,
+                  ],
+                ),
+                home: const WidgetUsingExtension(),
               ),
-              home: const WidgetUsingExtension(),
             ),
-          ),
-          Expanded(
-            child: MaterialApp(
-              title: "Joe's Bar and Grill",
-              theme: ThemeData(
-                extensions: [
-                  joesBarAndGrillThemeExtension,
-                ],
+            Expanded(
+              child: MaterialApp(
+                debugShowCheckedModeBanner: false,
+                title: 'Backend Dartists',
+                theme: ThemeData(
+                  extensions: [
+                    dartistsThemeExtension,
+                  ],
+                ),
+                home: const WidgetUsingExtension(),
               ),
-              home: const WidgetUsingExtension(),
             ),
-          ),
-          Expanded(
-            child: MaterialApp(
-              title: 'Wingnut Welfare Inc.',
-              theme: ThemeData(
-                extensions: [
-                  wingnutWelfareThemeExtension,
-                ],
+            Expanded(
+              child:
+              MaterialApp(
+                debugShowCheckedModeBanner: false,
+                title: 'Flutter Coders',
+                theme: ThemeData(
+                  extensions: [
+                    flutterCodersThemeExtension,
+                  ],
+                ),
+                home: const WidgetUsingExtension(),
               ),
-              home: const WidgetUsingExtension(),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

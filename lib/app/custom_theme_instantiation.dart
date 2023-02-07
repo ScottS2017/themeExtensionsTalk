@@ -1,14 +1,15 @@
-import 'package:theme_extensions/theme_extension/theme.dart';
+import 'package:theme_extensions/theme_extension/custom_theme_extension.dart';
 
-/// This is the [CustomThemeExtension] for "Acme Anvil Company".
-final acmeAnvilCompanyThemeExtension = CustomThemeExtension(
-  name: 'Acme Anvil Company',
-  slogan: 'Special Delivery Hare Mail',
-  streetAddress: '123 Nowhere Street',
-  city: 'InTheSticks',
-  state: 'Kentucky',
-  phone: '+500 555 1212',
-  email: 'noone@nowhere.net',
+/// This is the [CustomThemeExtension] for "Flutter Web Crafters".
+final flutterWebCraftersThemeExtension = CustomThemeExtension(
+  name: 'Flutter Web Crafters',
+  slogan: 'Since Before Flutter Web was Flutter Web',
+  streetAddress: '123 Webworks Lane',
+  city: 'New York',
+  state: 'New York',
+  phone: '+1 650 765 4321',
+  email: 'web@slingers.flutter',
+  logoImage: 'assets/images/hummingbird.png',
   colorPalette: const ThemeExtensionColorPalette(
     primary1: Color(0xFF003C3C),
     primary2: Color(0xFF075151),
@@ -32,17 +33,18 @@ final acmeAnvilCompanyThemeExtension = CustomThemeExtension(
   textStyles: CustomThemeExtension.defaultTextStyles,
 );
 
-/// This is the [CustomThemeExtension] for "Joe's Bar and Grill".
-final joesBarAndGrillThemeExtension = CustomThemeExtension(
-  name: 'Joe\'s Bar and Grill',
-  slogan: 'Greasy Food Done Right',
-  streetAddress: '123 Heart Attack Ln',
-  city: 'Burgerland',
-  state: 'Texas',
-  phone: '+500 555 8899',
-  email: 'joe@sliders-r-us.com',
+/// This is the [CustomThemeExtension] for "Backend Dartists".
+final dartistsThemeExtension = CustomThemeExtension(
+  name: 'Backend Dartists',
+  slogan: 'Full Stack Dart FTW',
+  streetAddress: '123 Serverside Ave',
+  city: 'Sunnyvale',
+  state: 'California',
+  phone: '+1 408 555 1212',
+  email: 'solutions@dartists.dev',
+  logoImage: 'assets/images/dart.png',
   colorPalette: const ThemeExtensionColorPalette(
-    primary1: Color(0xFF0F1E0F),
+    primary1: Color(0xFF235323),
     primary2: Color(0xFF235323),
     primary3: Color(0xFF2EBD2E),
     primary4: Color(0xFF24E924),
@@ -64,24 +66,25 @@ final joesBarAndGrillThemeExtension = CustomThemeExtension(
   textStyles: CustomThemeExtension.defaultTextStyles,
 );
 
-/// This is the [CustomThemeExtension] for "Wingnut Welfare".
-final wingnutWelfareThemeExtension = CustomThemeExtension(
-  name: 'Wingnut Welfare',
-  slogan: 'Funding Crazy Uncle Liberty since 1955',
-  streetAddress: '555 Freedom Ln',
-  city: 'Self-Righteousville',
-  state: 'South Carolina',
-  phone: '+997 595 8219',
-  email: 'freedom-posts@your-facebook-feed.com',
+/// This is the [CustomThemeExtension] for "Flutter Coders".
+final flutterCodersThemeExtension = CustomThemeExtension(
+  name: 'Flutter Coders',
+  slogan: 'Hitting the target like a Dart',
+  streetAddress: '555 Dash Ln',
+  city: 'Cleveland',
+  state: 'Ohio',
+  phone: '+1 123 456 7890',
+  email: 'orders@we_make_apps.com',
+  logoImage: 'assets/images/flutter.png',
   colorPalette: const ThemeExtensionColorPalette(
-    primary1: Color(0xF4FF3654),
+    primary1: Color(0xFF6ec3ed ),
     primary2: Color(0xFFFFFFFF),
     primary3: Color(0xFF3656F4),
-    primary4: Color(0xFF000000),
-    secondary1: Color(0xFF3CF436),
+    primary4: Color(0xFF1a68d3),
+    secondary1: Color(0xFF833ef2 ),
     secondary2: Color(0xFFF436E4),
     secondary3: Color(0xFFF4E436),
-    secondary4: Color(0xFFCCCCCC),
+    secondary4: Color(0xFF833ef2 ),
     onPrimary1: Color(0xFFFFFFFF),
     onPrimary2: Color(0xFF222222),
     onPrimary3: Color(0xFFFFFF27),
